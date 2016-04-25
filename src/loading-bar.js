@@ -189,7 +189,7 @@ angular.module('cfp.loadingBar', [])
       /**
        * Inserts the loading bar element into the dom, and sets it to 2%
        */
-      function _start() {
+      function _start(showSpinner) {
         if (!$animate) {
           $animate = $injector.get('$animate');
         }
@@ -221,7 +221,7 @@ angular.module('cfp.loadingBar', [])
           $animate.enter(loadingBarContainer, $parent, $after);
         }
 
-        if (includeSpinner) {
+        if (includeSpinner && showSpinner) {
           $animate.enter(spinner, $parent, loadingBarContainer);
         }
 
