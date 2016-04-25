@@ -227,7 +227,7 @@ angular.module('cfp.loadingBar', [])
           $animate.enter(loadingBarContainer, $parent, $after);
         }
 
-        if (includeSpinner) {
+        if (includeSpinner ) {
           $animate.enter(spinner, $parent, loadingBarContainer);
         }
 
